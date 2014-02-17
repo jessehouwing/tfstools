@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30129.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JesseHouwing.CheckinPolicies", "JesseHouwing.CheckinPolicies\JesseHouwing.CheckinPolicies.csproj", "{CAF15AC1-8D7F-4FB2-8712-0435EC522AC3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		VS2010|Any CPU = VS2010|Any CPU
+		VS2012|Any CPU = VS2012|Any CPU
+		VS2013|Any CPU = VS2013|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CAF15AC1-8D7F-4FB2-8712-0435EC522AC3}.VS2010|Any CPU.ActiveCfg = VS2010|Any CPU
+		{CAF15AC1-8D7F-4FB2-8712-0435EC522AC3}.VS2010|Any CPU.Build.0 = VS2010|Any CPU
+		{CAF15AC1-8D7F-4FB2-8712-0435EC522AC3}.VS2012|Any CPU.ActiveCfg = VS2012|Any CPU
+		{CAF15AC1-8D7F-4FB2-8712-0435EC522AC3}.VS2012|Any CPU.Build.0 = VS2012|Any CPU
+		{CAF15AC1-8D7F-4FB2-8712-0435EC522AC3}.VS2013|Any CPU.ActiveCfg = VS2013|Any CPU
+		{CAF15AC1-8D7F-4FB2-8712-0435EC522AC3}.VS2013|Any CPU.Build.0 = VS2013|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(CodealikeProperties) = postSolution
+		SolutionGuid = ae0303c2-0910-41f1-82be-03b44dd073e8
+	EndGlobalSection
+EndGlobal
