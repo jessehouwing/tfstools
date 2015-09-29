@@ -1,6 +1,8 @@
 ﻿using Microsoft.TeamFoundation.VersionControl.Client;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -135,7 +137,8 @@ namespace JesseHouwing.CheckinPolicies
 
                 var groupedChanges = PendingCheckin.PendingChanges.CheckedPendingChanges.GroupBy(
                     change =>
-                    branches.SingleOrDefault(branch => change.ServerItem.StartsWith(branch.Properties.RootItem.Item)));
+
+                    branches.SingleOrDefault(branch => IsSubDirectoryOf(branch.Properties.RootItem.Item, change.ServerItem)));
 
                 if (!WarnWhenRootBranchIsSelected)
                 {
@@ -149,6 +152,28 @@ namespace JesseHouwing.CheckinPolicies
             }
 
             return failures.ToArray();
+        }
+
+
+        public static bool IsSubDirectoryOf(string root, string path)
+        {
+            var isChild = false;
+
+            var pathInfo = new DirectoryInfo(path);
+            var rootInfo = new DirectoryInfo(root);
+
+            while (pathInfo.Parent != null)
+            {
+                if (pathInfo.Parent.FullName == rootInfo.FullName)
+                {
+                    isChild = true;
+                    break;
+                }
+                else pathInfo = pathInfo.Parent;
+            }
+
+
+            return isChild;
         }
 
 
