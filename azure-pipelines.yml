@@ -17,7 +17,7 @@ variables:
 steps:
 - task: NuGetToolInstaller@1
   inputs:
-    versionSpec: 'latest'
+    versionSpec: '5.x'
     checkLatest: true
 
 - task: UseDotNet@2
@@ -30,3 +30,7 @@ steps:
   inputs:
     version: 'latest'
     checkLatest: true
+
+- task: TfxInstaller@2
+  inputs:
+    version: 'v0.7.x'
