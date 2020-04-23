@@ -23,12 +23,12 @@ steps:
 - task: UseDotNet@2
   inputs:
     packageType: 'sdk'
-    version: 'latest'
+    version: '3.x'
     includePreviewVersions: true
 
 - task: UseNode@1
   inputs:
-    version: 'latest'
+    version: '14.x'
     checkLatest: true
 
 - task: TfxInstaller@2
